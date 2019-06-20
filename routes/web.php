@@ -14,11 +14,6 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
-
-Route::get('/{any}', function () {
-  return view('welcome');
-})->where('any', '.*');
-
 Route::resource('departement', 'DepartementController');
 Route::resource('prof', 'ProfController');
 Route::resource('responsable', 'ResponsableController');

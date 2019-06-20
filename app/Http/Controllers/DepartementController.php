@@ -16,8 +16,7 @@ class DepartementController extends Controller
     public function index()
     {
         $departements=Departement::paginate(2);
-        //return view('departements.index', compact('departements'));
-        return response()->json(Departement::all(), 200);
+        return view('departements.index', compact('departements'));
     }
 
     /**
@@ -39,18 +38,16 @@ class DepartementController extends Controller
     public function store(Request $request)
     {
 
-        //$image = $request->get('titre').''.time().'.'.request()->image->getClientOriginalExtension();
-        //request()->image->move(public_path('departements/images'), $image);
-        /*$departement=new Departement(
+        $image = $request->get('titre').''.time().'.'.request()->image->getClientOriginalExtension();
+        request()->image->move(public_path('departements/images'), $image);
+        $departement=new Departement(
             [
                 'titre'=>$request->get('titre'),
                 'image'=>$request->get('image')
             ]
         );
-        $departement->save();*/
-        //return redirect('/departement')->with('success', 'Departement has been added');
-        $departement=Departement::create($request->all());
-        return $departement;
+        $departement->save();
+        return redirect('/departement')->with('success', 'Departement has been added');
     }
 
     /**
@@ -61,8 +58,7 @@ class DepartementController extends Controller
      */
     public function show(Departement $departement)
     {
-        //return view('departements.show', compact('departement'));
-        return $departement;
+        return view('departements.show', compact('departement'));
     }
 
     /**
@@ -86,14 +82,12 @@ class DepartementController extends Controller
     public function update(Request $request, Departement $departement)
     {
         
-        /*$image = $request->get('titre').''.time().'.'.request()->image->getClientOriginalExtension();
+        $image = $request->get('titre').''.time().'.'.request()->image->getClientOriginalExtension();
         request()->image->move(public_path('departements/images'), $image);  
         $departement->titre=$request->get('titre');  
         $departement->image=$image; 
         $departement->save();
-        return redirect('/departement')->with('success', 'Departement has been updated');*/
-        $departement->update($request->all());
-        return $departement;
+        return redirect('/departement')->with('success', 'Departement has been updated');
     }
 
     /**
@@ -105,7 +99,6 @@ class DepartementController extends Controller
     public function destroy(Departement $departement)
     {
         $departement->delete();
-        //return redirect('/departement')->with('success', 'Departement has been removed');
-        return response()->json('Successfully Deleted');
+        return redirect('/departement')->with('success', 'Departement has been removed');
     }
 }
