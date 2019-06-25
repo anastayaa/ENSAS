@@ -22,6 +22,11 @@ class CreateDocumentsTable extends Migration
             $table->string('doc');
             $table->timestamps();
         });
+
+        Schema::table('documents', function ($table) {
+            DB::statement('ALTER TABLE documents MODIFY COLUMN description VARCHAR(1000)');
+        });
+        
     }
 
     /**

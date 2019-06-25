@@ -41,7 +41,7 @@ class FilieresTableSeeder extends Seeder
         	],
             [
                 'titre'=>'Génie des Procédés et Matériaux Céramiques',
-                'image'=>'industriel.png',
+                'image'=>'gpmc.png',
                 'departement_id'=>2,
                 'coordinateur_id'=>4,
                 'responsable_id'=>2,

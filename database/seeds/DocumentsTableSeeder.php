@@ -65,6 +65,33 @@ class DocumentsTableSeeder extends Seeder
                 'slide_id'=>1,
                 'created_at'=>date("Y-m-d H:i:s"),
                 'updated_at'=>date("Y-m-d H:i:s")
+            ],
+            [
+                'titre'=>"Offre - Recrutement d'un poste contractuel",
+                'description'=>"L'Ecole Nationale des Sciences Appliquées de Safi organise un concours pour le recrutement d'un poste contractuel ouvert aux doctorants de l'université Cadi Ayyad.",
+                'doc'=>'avis1.pdf',
+                'emploi_id'=>null,
+                'slide_id'=>1,
+                'created_at'=>date("Y-m-d H:i:s"),
+                'updated_at'=>date("Y-m-d H:i:s")
+            ],
+            [
+                'titre'=>"Offre - Recrutement d'un professeur assistant",
+                'description'=>"L'Ecole Nationale des Sciences Appliquées de Safi organise, le 20/09/2016 un concours pour le recrutement d'un professeur de l'enseignement supérieur assistant en Langue Anglaise.",
+                'doc'=>'avis2.pdf',
+                'emploi_id'=>null,
+                'slide_id'=>1,
+                'created_at'=>date("Y-m-d H:i:s"),
+                'updated_at'=>date("Y-m-d H:i:s")
+            ],
+            [
+                'titre'=>"Offre - Recrutement d'un Professeur de l'Enseignement Supérieur Assistant",
+                'description'=>"L'Ecole Polytechnique de Safi (L'Ecole Nationale des Sciences Appliquées de Safi) organise, le 25/11/2016 un concours pour le recrutement d'un Professeur de l'Enseignement Supérieur Assistant en : RESEAUX TELECOMMUNTCATIONS ou INFORMATIeUE (01poste).",
+                'doc'=>'avis3.pdf',
+                'emploi_id'=>null,
+                'slide_id'=>1,
+                'created_at'=>date("Y-m-d H:i:s"),
+                'updated_at'=>date("Y-m-d H:i:s")
             ]
         ];
         DB::table('documents')->insert($documents);
